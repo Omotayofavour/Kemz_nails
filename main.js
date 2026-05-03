@@ -62,7 +62,17 @@ function setupNav() {
     if (window.scrollY > 40) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   });
-  $('#menuBtn').addEventListener('click', () => $('#mobileMenu').classList.toggle('hidden'));
+  $('#menuBtn').addEventListener('click', () => {
+    const menu = $('#mobileMenu');
+    const icon = $('#menuBtn i');
+    menu.classList.toggle('hidden');
+    if (menu.classList.contains('hidden')) {
+      icon.setAttribute('data-lucide', 'menu');
+    } else {
+      icon.setAttribute('data-lucide', 'x');
+    }
+    lucide.createIcons();
+  });
   $$('.mobile-link').forEach(l => l.addEventListener('click', () => $('#mobileMenu').classList.add('hidden')));
 }
 
