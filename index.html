@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kemz_nails — Luxury Nails. Perfect Confidence.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        nude: '#E8D9CC',
+        nudeLight: '#F5EBE0',
+        softpink: '#F4D3D6',
+        blush: '#EBC8C4',
+        gold: '#C9A96E',
+        goldDark: '#A8884E',
+        cream: '#FBF7F2'
+      },
+      fontFamily: {
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['Montserrat', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+</head>
+<body class="font-sans bg-cream text-stone-800 antialiased">
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="glass-nav mx-3 md:mx-8 mt-3 md:mt-4 px-5 md:px-6 py-3 md:py-4 rounded-full flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-2">
+      <span class="font-serif text-xl md:text-2xl font-semibold text-stone-900">Kemz<span class="text-gold glow-text">_nails</span></span>
+    </a>
+    <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-stone-700">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#booking" class="hidden md:inline-flex items-center gap-2 bg-stone-900 text-cream px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gold transition-colors duration-300 glow-btn">
+      Book Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
+    </a>
+    <button id="menuBtn" aria-label="Menu" class="lg:hidden text-stone-800 p-1"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden glass-nav mx-3 mt-2 rounded-3xl p-6">
+    <ul class="flex flex-col gap-4 text-stone-700">
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+      <li><a href="#reviews" class="mobile-link">Reviews</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="#booking" class="mobile-link text-gold font-semibold">Book Appointment</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img src="assets/464b3255522508b7_luxury_nail_salon_hero_image_index_0.jpeg" alt="luxury nails" class="w-full h-full object-cover scale-105 hero-img"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-black/10"></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-softpink/20 via-transparent to-gold/10 mix-blend-overlay"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-transparent"></div>
+  </div>
+
+  <div class="sparkle sparkle-1"></div>
+  <div class="sparkle sparkle-2"></div>
+  <div class="sparkle sparkle-3"></div>
+  <div class="sparkle sparkle-4"></div>
+  <div class="sparkle sparkle-5"></div>
+  <div class="sparkle sparkle-6"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-20 w-full">
+    <div class="max-w-3xl fade-up">
+      <div class="inline-flex items-center gap-2 glass-pill px-4 py-2 rounded-full mb-6">
+        <span class="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
+        <span class="text-xs tracking-widest uppercase text-white/90">Premium Nail Studio · Mowe</span>
+      </div>
+      <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] font-medium glow-heading">
+        Luxury Nails.<br/>
+        <span class="italic text-softpink">Perfect</span> Confidence.
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-white/85 max-w-xl font-light">
+        Premium nail services in Mowe, Ogun State. Crafted with precision, finished with elegance.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#booking" class="btn-primary glow-btn group">
+          <span>Book Appointment</span>
+          <i data-lucide="calendar" class="w-5 h-5 transition-transform group-hover:rotate-12"></i>
+        </a>
+        <a href="#gallery" class="btn-glass group">
+          <span>View Designs</span>
+          <i data-lucide="sparkles" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
+        </a>
+      </div>
+      <div class="mt-12 flex items-center gap-6 text-white/90">
+        <div class="flex items-center gap-1">
+          <i data-lucide="star" class="w-5 h-5 fill-gold text-gold"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-gold text-gold"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-gold text-gold"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-gold text-gold"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-gold text-gold"></i>
+        </div>
+        <div class="text-sm"><span class="font-semibold">5.0</span> · Trusted by 500+ clients</div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/70 hover:text-white transition flex flex-col items-center gap-2">
+    <span class="text-xs tracking-widest uppercase">Scroll</span>
+    <i data-lucide="chevron-down" class="w-5 h-5 animate-bounce"></i>
+  </a>
+</section>
+
+<section id="about" class="py-24 md:py-32 px-6 md:px-12 bg-cream relative overflow-hidden">
+  <div class="absolute -top-32 -right-32 w-96 h-96 bg-softpink/40 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-nude/50 rounded-full blur-3xl"></div>
+  <div class="absolute top-1/3 left-1/4 w-72 h-72 bg-gold/10 rounded-full blur-3xl"></div>
+
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative">
+    <div class="reveal">
+      <span class="text-xs tracking-[0.3em] uppercase text-gold font-medium">Our Story</span>
+      <h2 class="font-serif text-4xl md:text-6xl mt-4 leading-tight text-stone-900">The pursuit of <em class="text-gold glow-text">perfection</em>.</h2>
+      <p class="mt-6 text-stone-600 leading-relaxed text-lg">
+        At <strong class="text-stone-900">Kemz_nails</strong>, luxury lives in the details. What began as a passion for precision has become Mowe's premier destination for high-end nail care — built on uncompromising quality and an obsession with hygiene.
+      </p>
+      <div class="mt-10 grid grid-cols-3 gap-4">
+        <div class="text-center p-6 glass-card rounded-2xl">
+          <div class="font-serif text-4xl text-gold">5.0</div>
+          <div class="text-xs uppercase tracking-wider text-stone-500 mt-2">Rating</div>
+        </div>
+        <div class="text-center p-6 glass-card rounded-2xl">
+          <div class="font-serif text-4xl text-gold">500+</div>
+          <div class="text-xs uppercase tracking-wider text-stone-500 mt-2">Clients</div>
+        </div>
+        <div class="text-center p-6 glass-card rounded-2xl">
+          <div class="font-serif text-4xl text-gold">3+</div>
+          <div class="text-xs uppercase tracking-wider text-stone-500 mt-2">Years</div>
+        </div>
+      </div>
+      <ul class="mt-10 space-y-4">
+        <li class="flex gap-4 items-start"><div class="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0"><i data-lucide="shield-check" class="w-5 h-5 text-gold"></i></div><div><strong class="block">Medical-Grade Cleanliness</strong><span class="text-stone-600 text-sm">Rigorous sterilization & premium single-use disposables.</span></div></li>
+        <li class="flex gap-4 items-start"><div class="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0"><i data-lucide="award" class="w-5 h-5 text-gold"></i></div><div><strong class="block">Master Artistry</strong><span class="text-stone-600 text-sm">Artisans trained in the latest global trends.</span></div></li>
+        <li class="flex gap-4 items-start"><div class="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0"><i data-lucide="gem" class="w-5 h-5 text-gold"></i></div><div><strong class="block">Premium Products</strong><span class="text-stone-600 text-sm">High-pigment polishes and durable polymers only.</span></div></li>
+      </ul>
+    </div>
+    <div class="reveal relative">
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] glow-frame">
+        <img src="assets/e7cda5c9dde09543_luxury_acrylic_nail_art_gallery_index_1.jpeg" alt="about" class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000"/>
+      </div>
+      <div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl max-w-xs hidden md:block">
+        <div class="flex items-center gap-1 mb-2">
+          <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+        </div>
+        <p class="text-sm text-stone-700 italic">"The gold standard of nail artistry in Ogun State."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="py-24 md:py-32 px-6 md:px-12 bg-gradient-to-b from-cream via-nudeLight to-softpink/30">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs tracking-[0.3em] uppercase text-gold font-medium">Signature Services</span>
+      <h2 class="font-serif text-4xl md:text-6xl mt-4 leading-tight text-stone-900">Crafted for the <em class="text-gold glow-text">discerning</em>.</h2>
+      <p class="mt-4 text-stone-600">Each service is a curated experience — designed to elevate, refine, and indulge.</p>
+    </div>
+    <div id="servicesGrid" class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </div>
+</section>
+
+<section id="gallery" class="py-24 md:py-32 px-6 md:px-12 bg-cream relative overflow-hidden">
+  <div class="absolute top-20 right-10 w-72 h-72 bg-softpink/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl"></div>
+  <div class="max-w-7xl mx-auto relative">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs tracking-[0.3em] uppercase text-gold font-medium">Gallery</span>
+      <h2 class="font-serif text-4xl md:text-6xl mt-4 leading-tight text-stone-900">Masterpieces in <em class="text-gold glow-text">motion</em>.</h2>
+      <p class="mt-4 text-stone-600">A glimpse into the artistry that defines Kemz_nails.</p>
+    </div>
+    <div id="galleryGrid" class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"></div>
+    <div class="mt-12 text-center">
+      <a href="https://instagram.com" target="_blank" class="inline-flex items-center gap-2 text-stone-700 hover:text-gold transition">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1.5" />
+        </svg>
+        <span>Follow @kemz_nails for more</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="py-24 md:py-32 px-6 md:px-12 bg-gradient-to-b from-nudeLight via-softpink/30 to-nude/40 relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/30 rounded-full blur-3xl"></div>
+  <div class="max-w-6xl mx-auto relative">
+    <div class="text-center reveal">
+      <span class="text-xs tracking-[0.3em] uppercase text-gold font-medium">Testimonials</span>
+      <h2 class="font-serif text-4xl md:text-6xl mt-4 leading-tight text-stone-900">A perfect <em class="text-gold glow-text">5.0</em>.</h2>
+      <div class="flex items-center justify-center gap-1 mt-6">
+        <i data-lucide="star" class="w-7 h-7 fill-gold text-gold"></i>
+        <i data-lucide="star" class="w-7 h-7 fill-gold text-gold"></i>
+        <i data-lucide="star" class="w-7 h-7 fill-gold text-gold"></i>
+        <i data-lucide="star" class="w-7 h-7 fill-gold text-gold"></i>
+        <i data-lucide="star" class="w-7 h-7 fill-gold text-gold"></i>
+      </div>
+      <p class="mt-3 text-stone-600">From clients who know luxury when they see it.</p>
+    </div>
+    <div id="reviewsGrid" class="mt-16 grid md:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<section id="contact" class="py-24 md:py-32 px-6 md:px-12 bg-cream">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs tracking-[0.3em] uppercase text-gold font-medium">Visit Us</span>
+      <h2 class="font-serif text-4xl md:text-6xl mt-4 leading-tight text-stone-900">Find your <em class="text-gold glow-text">sanctuary</em>.</h2>
+    </div>
+    <div class="mt-16 grid lg:grid-cols-2 gap-8">
+      <div class="glass-card rounded-3xl overflow-hidden h-[450px] reveal">
+        <iframe src="https://www.google.com/maps?q=Mowe+Ogun+State+Nigeria&output=embed" class="w-full h-full border-0" loading="lazy"></iframe>
+      </div>
+      <div class="glass-card rounded-3xl p-8 md:p-10 reveal">
+        <h3 class="font-serif text-3xl text-stone-900">Kemz_nails Studio</h3>
+        <div class="mt-8 space-y-6">
+          <div class="flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-gold"></i></div>
+            <div><div class="text-xs uppercase tracking-wider text-stone-500">Address</div><div class="text-stone-800 mt-1">10 Popoola Street, Ofada Rd,<br/>Mowe, Ogun State</div></div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0"><i data-lucide="phone" class="w-5 h-5 text-gold"></i></div>
+            <div><div class="text-xs uppercase tracking-wider text-stone-500">Phone</div><a href="tel:+2347063299518" class="text-stone-800 mt-1 block hover:text-gold transition">0706 329 9518</a></div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0"><i data-lucide="clock" class="w-5 h-5 text-gold"></i></div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-stone-500">Business Hours</div>
+              <div class="text-stone-800 mt-1 text-sm space-y-1">
+                <div class="flex justify-between gap-8"><span>Mon – Sat</span><span class="text-stone-600">9:00 AM – 8:00 PM</span></div>
+                <div class="flex justify-between gap-8"><span>Sunday</span><span class="text-gold font-medium">1:30 AM – 12:00 AM</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1.5" />
+            </svg>
+          </div>
+            <div><div class="text-xs uppercase tracking-wider text-stone-500">Instagram</div><a href="https://instagram.com" target="_blank" class="text-stone-800 mt-1 block hover:text-gold transition">@kemz_nails</a></div>
+          </div>
+        </div>
+        <a href="https://wa.me/2347063299518" target="_blank" class="mt-8 w-full inline-flex items-center justify-center gap-2 bg-stone-900 text-cream py-4 rounded-full hover:bg-gold transition-colors glow-btn">
+          <i data-lucide="message-circle" class="w-5 h-5"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="py-24 md:py-32 px-6 md:px-12 bg-gradient-to-br from-softpink/40 via-cream to-nude/50 relative">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center reveal">
+      <span class="text-xs tracking-[0.3em] uppercase text-gold font-medium">Reservation</span>
+      <h2 class="font-serif text-4xl md:text-6xl mt-4 leading-tight text-stone-900">Secure your <em class="text-gold glow-text">moment</em>.</h2>
+      <p class="mt-4 text-stone-600 max-w-xl mx-auto">Reserve your appointment and let us prepare the perfect experience for you.</p>
+    </div>
+    <form id="bookingForm" class="mt-12 glass-card rounded-3xl p-8 md:p-12 reveal">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2">Full Name</label>
+          <input type="text" name="name" required class="form-input" placeholder="Your name"/>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2">Phone</label>
+          <input type="tel" name="phone" required class="form-input" placeholder="0706 000 0000"/>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2">Service</label>
+          <select name="service" required class="form-input">
+            <option value="">Select a service</option>
+            <option>Sculpted Acrylics</option>
+            <option>Gel Polish</option>
+            <option>Nail Fixing</option>
+            <option>Bespoke Nail Art</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2">Date & Time</label>
+          <input type="datetime-local" name="datetime" required class="form-input"/>
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2">Notes (optional)</label>
+          <textarea name="notes" rows="3" class="form-input resize-none" placeholder="Inspiration, soak-off needs, etc."></textarea>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <button type="submit" class="btn-primary glow-btn flex-1 justify-center">
+          <i data-lucide="calendar-check" class="w-5 h-5"></i> Request Appointment
+        </button>
+        <a href="https://wa.me/2347063299518" target="_blank" class="btn-whatsapp flex-1 justify-center">
+          <i data-lucide="message-circle" class="w-5 h-5"></i> Book via WhatsApp
+        </a>
+      </div>
+      <p id="formMsg" class="mt-4 text-center text-sm text-gold hidden">✨ Thank you! We'll confirm your appointment shortly.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="bg-stone-900 text-cream py-12 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+    <div>
+      <span class="font-serif text-2xl">Kemz<span class="text-gold">_nails</span></span>
+      <p class="mt-2 text-sm text-cream/60">Luxury nail studio · Mowe, Ogun State</p>
+    </div>
+    <div class="flex md:justify-center gap-4">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-gold hover:border-gold transition">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1.5" />
+        </svg>
+      </a>
+      <a href="https://wa.me/2347063299518" target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-gold hover:border-gold transition"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+      <a href="tel:+2347063299518" aria-label="Phone" class="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-gold hover:border-gold transition"><i data-lucide="phone" class="w-4 h-4"></i></a>
+    </div>
+    <div class="md:text-right text-sm text-cream/60">© 2026 Kemz_nails Luxury Studio.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2347063299518" target="_blank" id="floatingWA" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-40 w-14 h-14 md:w-16 md:h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+  <i data-lucide="message-circle" class="w-6 h-6 md:w-7 md:h-7 text-white relative z-10"></i>
+  <span class="absolute inset-0 rounded-full animate-ping bg-green-500/40"></span>
+  <span class="absolute -top-1 -right-1 w-4 h-4 bg-gold rounded-full border-2 border-white sparkle-dot"></span>
+</a>
+
+<div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center p-6 cursor-pointer">
+  <img id="lightboxImg" src="" alt="" class="max-w-full max-h-full rounded-2xl shadow-2xl"/>
+  <button class="absolute top-6 right-6 text-white" aria-label="Close"><i data-lucide="x" class="w-8 h-8"></i></button>
+</div>
+
+<script type="module" src="main.js"></script>
+<script type="module" src="data.js"></script>
+</body>
+</html>
