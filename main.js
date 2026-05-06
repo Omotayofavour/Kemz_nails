@@ -62,18 +62,36 @@ function setupNav() {
     if (window.scrollY > 40) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   });
-  $('#menuBtn').addEventListener('click', () => {
-    const menu = $('#mobileMenu');
+  const menuButton = $('#menuBtn');
+  const mobileMenu = $('#mobileMenu');
+  const mobileClose = $('#mobileCloseBtn');
+  const animationDuration = 360;
+
+  const setMenuState = (isOpen) => {
     const icon = $('#menuBtn i');
-    menu.classList.toggle('hidden');
-    if (menu.classList.contains('hidden')) {
-      icon.setAttribute('data-lucide', 'menu');
+    icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+    menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+    if (isOpen) {
+      mobileMenu.classList.remove('hidden', 'closing');
+      requestAnimationFrame(() => mobileMenu.classList.add('open'));
     } else {
-      icon.setAttribute('data-lucide', 'x');
+      mobileMenu.classList.remove('open');
+      mobileMenu.classList.add('closing');
+      window.setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('closing');
+      }, animationDuration);
     }
     lucide.createIcons();
+  };
+
+  menuButton.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('open');
+    setMenuState(!isOpen);
   });
-  $$('.mobile-link').forEach(l => l.addEventListener('click', () => $('#mobileMenu').classList.add('hidden')));
+  mobileClose.addEventListener('click', () => setMenuState(false));
+  $$('.mobile-link').forEach(l => l.addEventListener('click', () => setMenuState(false)));
 }
 
 function openLightbox(src) {

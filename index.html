@@ -7,10 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="https://cdn.tailwindcss.com" defer></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 <link rel="stylesheet" href="styles.css">
 <link rel="preload" href="assets/464b3255522508b7_luxury_nail_salon_hero_image_index_0.jpeg" as="image">
+<link rel="modulepreload" href="main.js">
+<link rel="modulepreload" href="data.js">
 <script>
 tailwind.config = {
   theme: {
@@ -50,9 +52,12 @@ tailwind.config = {
     <a href="#booking" class="hidden md:inline-flex items-center gap-2 bg-stone-900 text-cream px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gold transition-colors duration-300 glow-btn">
       Book Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
     </a>
-    <button id="menuBtn" aria-label="Menu" class="lg:hidden text-stone-800 p-1"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    <button id="menuBtn" aria-label="Menu" aria-expanded="false" class="lg:hidden text-stone-800 p-1"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
   <div id="mobileMenu" class="hidden lg:hidden glass-nav mx-3 mt-2 rounded-3xl p-6">
+    <button id="mobileCloseBtn" aria-label="Close menu" class="mobile-close-btn ml-auto mb-4 text-stone-700 hover:text-gold">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
     <ul class="flex flex-col gap-4 text-stone-700">
       <li><a href="#about" class="mobile-link">About</a></li>
       <li><a href="#services" class="mobile-link">Services</a></li>
@@ -66,7 +71,7 @@ tailwind.config = {
 
 <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
   <div class="absolute inset-0 z-0">
-    <img src="assets/464b3255522508b7_luxury_nail_salon_hero_image_index_0.jpeg" alt="luxury nails" class="w-full h-full object-cover scale-105 hero-img"/>
+    <img src="assets/464b3255522508b7_luxury_nail_salon_hero_image_index_0.jpeg" alt="luxury nails" class="w-full h-full object-cover scale-105 hero-img" decoding="async" fetchpriority="high"/>
     <div class="absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-black/10"></div>
     <div class="absolute inset-0 bg-gradient-to-tr from-softpink/20 via-transparent to-gold/10 mix-blend-overlay"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-transparent"></div>
@@ -193,7 +198,7 @@ tailwind.config = {
     </div>
     <div id="galleryGrid" class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"></div>
     <div class="mt-12 text-center">
-      <a href="https://instagram.com" target="_blank" class="inline-flex items-center gap-2 text-stone-700 hover:text-gold transition">
+      <a href="https://www.instagram.com/kemz_nails?igsh=a3h5c2JvNjkzZmNh" target="_blank" class="inline-flex items-center gap-2 text-stone-700 hover:text-gold transition">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="3" y="3" width="18" height="18" rx="5" />
           <circle cx="12" cy="12" r="4" />
@@ -232,7 +237,7 @@ tailwind.config = {
     </div>
     <div class="mt-16 grid lg:grid-cols-2 gap-8">
       <div class="glass-card rounded-3xl overflow-hidden h-[450px] reveal">
-        <iframe src="https://www.google.com/maps?q=Mowe+Ogun+State+Nigeria&output=embed" class="w-full h-full border-0" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps?q=Mowe+Ogun+State+Nigeria&output=embed" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="glass-card rounded-3xl p-8 md:p-10 reveal">
         <h3 class="font-serif text-3xl text-stone-900">Kemz_nails Studio</h3>
@@ -263,7 +268,7 @@ tailwind.config = {
               <circle cx="17.5" cy="6.5" r="1.5" />
             </svg>
           </div>
-            <div><div class="text-xs uppercase tracking-wider text-stone-500">Instagram</div><a href="https://instagram.com" target="_blank" class="text-stone-800 mt-1 block hover:text-gold transition">@kemz_nails</a></div>
+            <div><div class="text-xs uppercase tracking-wider text-stone-500">Instagram</div><a href="https://www.instagram.com/kemz_nails?igsh=a3h5c2JvNjkzZmNh" target="_blank" class="text-stone-800 mt-1 block hover:text-gold transition">@kemz_nails</a></div>
           </div>
         </div>
         <a href="https://wa.me/2347063299518" target="_blank" class="mt-8 w-full inline-flex items-center justify-center gap-2 bg-stone-900 text-cream py-4 rounded-full hover:bg-gold transition-colors glow-btn">
@@ -330,7 +335,7 @@ tailwind.config = {
       <p class="mt-2 text-sm text-cream/60">Luxury nail studio · Mowe, Ogun State</p>
     </div>
     <div class="flex md:justify-center gap-4">
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-gold hover:border-gold transition">
+      <a href="https://www.instagram.com/kemz_nails?igsh=a3h5c2JvNjkzZmNh" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-gold hover:border-gold transition">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="3" y="3" width="18" height="18" rx="5" />
           <circle cx="12" cy="12" r="4" />
