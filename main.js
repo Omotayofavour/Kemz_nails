@@ -68,8 +68,8 @@ function setupNav() {
   const animationDuration = 360;
 
   const setMenuState = (isOpen) => {
-    const icon = $('#menuBtn i');
-    icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+    const icon = menuButton.querySelector('[data-lucide]') || $('#menuBtn i');
+    if (icon) icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
     menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 
     if (isOpen) {

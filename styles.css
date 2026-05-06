@@ -75,6 +75,63 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 }
 .btn-primary:hover { background: #C9A96E; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(201,169,110,0.45); }
 
+.nav-book-btn {
+  background: #C9A96E;
+  color: #1c1917;
+  box-shadow: 0 10px 28px rgba(201,169,110,0.2);
+  transition: background .35s ease, box-shadow .35s ease, transform .35s ease;
+}
+.nav-book-btn:hover {
+  background: #E8C975;
+  box-shadow: 0 0 20px rgba(201,169,110,0.55);
+  transform: translateY(-1px);
+}
+
+.book-appointment-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.25rem;
+  background: #C9A96E;
+  color: #1c1917;
+  border-radius: 999px;
+  transition: background .35s ease, box-shadow .35s ease, transform .35s ease;
+}
+.book-appointment-link:hover {
+  background: #E8C975;
+  box-shadow: 0 0 20px rgba(201,169,110,0.45);
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp {
+  display: inline-flex; align-items:center; gap: 10px;
+  background: #C9A96E;
+  color: #1c1917;
+  padding: 14px 28px; border-radius: 999px;
+  font-weight: 500; font-size: 15px;
+  transition: all .35s ease, box-shadow .35s ease;
+}
+.btn-whatsapp:hover { background: #E8C975; transform: translateY(-2px); box-shadow: 0 0 20px rgba(201,169,110,0.4); }
+
+.contact-whatsapp {
+  background: #C9A96E;
+  color: #1c1917;
+}
+.contact-whatsapp:hover {
+  background: #E8C975;
+}
+
+.footer-icon-link {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+  transition: background .35s ease, border-color .35s ease, transform .35s ease;
+}
+.footer-icon-link:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: #fff;
+  transform: translateY(-1px);
+}
+
 .btn-glass {
   display: inline-flex; align-items:center; justify-content:center; gap: 10px;
   background: rgba(255,255,255,0.18);
@@ -87,15 +144,6 @@ body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   transition: all .35s ease;
 }
 .btn-glass:hover { background: rgba(255,255,255,0.28); transform: translateY(-2px); border-color: rgba(255,255,255,0.7); }
-
-.btn-whatsapp {
-  display: inline-flex; align-items:center; gap: 10px;
-  background: #25D366; color: #fff;
-  padding: 14px 28px; border-radius: 999px;
-  font-weight: 500; font-size: 15px;
-  transition: all .35s ease;
-}
-.btn-whatsapp:hover { background: #1eb955; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37,211,102,0.35); }
 
 .glow-btn {
   position: relative;
